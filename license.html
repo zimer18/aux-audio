@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>AUX — License</title>
+
 <style>
 body {
   background:#0b0b0b;
@@ -13,36 +14,54 @@ body {
   padding:60px 20px;
   line-height:1.6;
 }
+
 h1 {
   text-align:center;
   margin-bottom:40px;
 }
+
 h2 {
   margin-top:40px;
   font-size:18px;
 }
-p, li {
+
+p {
   font-size:14px;
   opacity:0.9;
 }
+
 ul {
-  margin-left:20px;
+  list-style:none;
+  padding-left:0;
 }
+
+li {
+  margin:8px 0;
+  font-size:14px;
+}
+
+/* GREEN CHECKS */
+.allowed li::before {
+  content:"✔ ";
+  color:#2ecc71;
+  font-weight:bold;
+}
+
+/* RED CROSSES */
+.forbidden li::before {
+  content:"✖ ";
+  color:#e74c3c;
+  font-weight:bold;
+}
+
 .footer {
   margin-top:60px;
   font-size:12px;
   opacity:0.6;
   text-align:center;
 }
-a {
-  color:white;
-  text-decoration:none;
-  border-bottom:1px solid rgba(255,255,255,0.3);
-}
-a:hover {
-  opacity:0.7;
-}
 </style>
+
 </head>
 <body>
 
@@ -53,88 +72,65 @@ All music released on the AUX channel is provided under the terms of this licens
 By downloading or using AUX music, you agree to the conditions below.
 </p>
 
-<h2>1. Permitted Use</h2>
-<p>
-You are allowed to use AUX music for free in:
-</p>
-<ul>
-  <li>YouTube videos and livestreams</li>
-  <li>Shorts, Reels, TikTok</li>
+<h2>✔ Permitted Use</h2>
+<ul class="allowed">
+  <li>Use in YouTube videos and livestreams</li>
+  <li>Use in Shorts, Reels and TikTok</li>
   <li>Commercial and non-commercial projects</li>
+  <li>Worldwide use with no time limitations</li>
 </ul>
-<p>
-Usage is permitted worldwide and without time limitations,
-as long as proper credit is provided.
-</p>
 
-<h2>2. Attribution (Credit Required)</h2>
-<p>
-You must include the following credit in the description of your content:
-</p>
-<p>
-<strong>
+<h2>✔ Attribution Required</h2>
+<p>You must include the following credit:</p>
+
+<p><strong>
 Artist – Track Name<br>
 Music provided by AUX
-</strong>
-</p>
-<p>
-The credit must be clearly visible in the video description or stream panel.
-</p>
+</strong></p>
 
-<h2>3. Content ID & Copyright Claims</h2>
-<p>
-All AUX music is released <strong>without Content ID registration</strong>.
-</p>
-<ul>
-  <li>You may not register AUX tracks in Content ID systems</li>
-  <li>You may not claim copyright ownership of AUX tracks</li>
-  <li>AUX music will not generate copyright claims when used correctly</li>
+<h2>✔ Content ID Policy</h2>
+<ul class="allowed">
+  <li>No Content ID registration</li>
+  <li>No copyright claims when used correctly</li>
 </ul>
 
-<h2>4. Prohibited Use</h2>
-<p>
-You are not allowed to:
-</p>
-<ul>
-  <li>Reupload or redistribute the tracks as standalone music</li>
-  <li>Sell, sublicense or monetize the tracks as audio-only content</li>
-  <li>Upload the tracks to music platforms (Spotify, Apple Music, etc.)</li>
-  <li>Claim the music as your own</li>
+<h2>❌ Prohibited Use</h2>
+<ul class="forbidden">
+  <li>Reuploading or redistributing the tracks</li>
+  <li>Selling or sublicensing the music</li>
+  <li>Uploading tracks to Spotify, Apple Music or similar platforms</li>
+  <li>Claiming the music as your own</li>
+  <li>Registering the tracks in Content ID systems</li>
 </ul>
 
-<h2>5. Modifications</h2>
-<p>
-You are allowed to edit the track for use in your content, including:
-</p>
-<ul>
-  <li>Cutting or looping</li>
+<h2>✔ Allowed Modifications</h2>
+<ul class="allowed">
+  <li>Cutting or looping the track</li>
   <li>Using the track as background music</li>
 </ul>
-<p>
-You may not release remixes or modified versions as standalone tracks.
-</p>
 
-<h2>6. Ownership</h2>
+<h2>❌ Not Allowed</h2>
+<ul class="forbidden">
+  <li>Releasing remixes as standalone tracks</li>
+  <li>Redistributing modified versions as music-only files</li>
+</ul>
+
+<h2>Ownership</h2>
 <p>
 All rights remain with the original artist and AUX.
 This license grants usage rights only and does not transfer ownership.
 </p>
 
-<h2>7. Liability</h2>
+<h2>Acceptance</h2>
 <p>
-AUX is not responsible for issues caused by improper use
-or failure to provide correct attribution.
-</p>
-
-<h2>8. Acceptance</h2>
-<p>
-By downloading or using AUX music, you confirm that you have read,
-understood and agreed to this license.
+By downloading or using AUX music,
+you confirm that you have read, understood and agreed to this license.
 </p>
 
 <div class="footer">
-  © AUX — Minimal Copyright-Free Music for Creators
+© AUX — Minimal Copyright-Free Music for Creators
 </div>
 
 </body>
 </html>
+
