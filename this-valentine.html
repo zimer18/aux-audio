@@ -2,57 +2,141 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>AUX — Download</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>This Valentine — AUX</title>
+
 <style>
+* { box-sizing: border-box; }
+
 body {
-  background:#0b0b0b;
-  color:white;
-  font-family:Arial, sans-serif;
-  text-align:center;
-  padding:80px;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: linear-gradient(135deg, #0f0f14, #1a1a2e, #12121a);
+    background-attachment: fixed;
+    color: #f5f5f5;
 }
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.container {
+    max-width: 700px;
+    margin: 120px auto;
+    padding: 50px 40px;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+    text-align: center;
+    animation: fadeUp 0.8s ease forwards;
+}
+
+h1 {
+    font-size: 34px;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.track-name {
+    font-size: 16px;
+    color: #9aa0ff;
+    margin-bottom: 40px;
+}
+
 .button {
-  display:inline-block;
-  padding:15px 40px;
-  border:1px solid white;
-  margin-top:30px;
-  text-decoration:none;
-  color:white;
+    display: inline-block;
+    padding: 14px 32px;
+    border-radius: 8px;
+    font-size: 14px;
+    text-decoration: none;
+    margin: 10px;
+    transition: all 0.3s ease;
 }
-.button:hover {
-  background:white;
-  color:black;
+
+.mp3 {
+    background: #9aa0ff;
+    color: #000;
 }
-a { color:white; }
+
+.mp3:hover {
+    background: #b6bbff;
+}
+
+.wav {
+    border: 1px solid #9aa0ff;
+    color: #9aa0ff;
+}
+
+.wav:hover {
+    background: #9aa0ff;
+    color: #000;
+}
+
+.info {
+    font-size: 12px;
+    opacity: 0.6;
+    margin-top: 25px;
+    line-height: 1.6;
+}
+
+.license {
+    margin-top: 40px;
+    font-size: 13px;
+}
+
+.license a {
+    color: #9aa0ff;
+    text-decoration: none;
+}
+
+.license a:hover {
+    text-decoration: underline;
+}
+
+.footer {
+    margin-top: 60px;
+    font-size: 11px;
+    opacity: 0.5;
+}
 </style>
 </head>
+
 <body>
 
-<h1>AUX</h1>
-<p>This Valentine</p>
+<div class="container">
 
-<a class="button"
+<h1>AUX</h1>
+<div class="track-name">This Valentine</div>
+
+<a class="button mp3"
 href="https://drive.google.com/uc?export=download&id=1Cu2lneTAHHSQVYtjS8ai_LoN4LO20hhk">
 Download MP3
 </a>
 
-<br><br>
-
-<a class="button"
+<a class="button wav"
 href="https://drive.google.com/uc?export=download&id=11xPIN_kTPC5SwVSYM_YzTCr0vodWW1jP">
 Download WAV
 </a>
 
-<p style="font-size:12px;opacity:0.6;margin-top:16px;line-height:1.6;">
+<div class="info">
 MP3 — recommended for YouTube<br>
 WAV — high quality (large file)
-</p>
+</div>
 
-<p style="margin-top:40px;font-size:12px;">
+<div class="license">
 ✔ Free to use with credit<br>
-❌ No Content ID<br>
+❌ No Content ID<br><br>
 <a href="license.html">View License</a>
-</p>
+</div>
+
+<div class="footer">
+© AUX — Digital Music Label
+</div>
+
+</div>
 
 </body>
 </html>
