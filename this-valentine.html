@@ -10,17 +10,20 @@
 
 body {
     margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     background: linear-gradient(135deg, #0f0f14, #1a1a2e, #12121a);
-    background-attachment: fixed;
     color: #f5f5f5;
+    overflow: hidden; /* Убираем скролл */
 }
 
-/* Контейнер без растягивания */
 .container {
+    width: 90%;
     max-width: 720px;
-    margin: 80px auto;
-    padding: 50px 40px;
+    padding: 40px 35px;
     background: rgba(255,255,255,0.05);
     backdrop-filter: blur(14px);
     border: 1px solid rgba(255,255,255,0.08);
@@ -29,28 +32,33 @@ body {
     text-align: center;
 }
 
-/* ===== LOGO ===== */
+/* ===== LOGO PULSE ===== */
+
+@keyframes pulseGlow {
+    0% {
+        filter: drop-shadow(0 0 20px rgba(255,255,255,0.25));
+    }
+    50% {
+        filter: drop-shadow(0 0 50px rgba(154,160,255,0.9));
+    }
+    100% {
+        filter: drop-shadow(0 0 20px rgba(255,255,255,0.25));
+    }
+}
 
 .logo {
     width: 520px;
     max-width: 95%;
-    margin-bottom: 10px;
-
-    filter: drop-shadow(0 0 30px rgba(255,255,255,0.3));
-    transition: all 0.4s ease;
+    margin-bottom: 8px;
+    animation: pulseGlow 3.5s ease-in-out infinite;
 }
 
-.logo:hover {
-    filter: drop-shadow(0 0 60px rgba(154,160,255,0.9));
-    transform: scale(1.03);
-}
-
-/* ===== TRACK NAME ===== */
+/* ===== TRACK ===== */
 
 .track-name {
-    font-size: 34px;
+    font-size: 30px;
     font-weight: 600;
-    margin-bottom: 35px;
+    margin-bottom: 30px;
     color: #cfd3ff;
     letter-spacing: 1px;
 }
@@ -59,11 +67,11 @@ body {
 
 .button {
     display: inline-block;
-    padding: 14px 32px;
+    padding: 12px 28px;
     border-radius: 8px;
     font-size: 14px;
     text-decoration: none;
-    margin: 10px;
+    margin: 8px;
     border: 1px solid #9aa0ff;
     color: #9aa0ff;
     transition: all 0.3s ease;
@@ -72,7 +80,7 @@ body {
 .button:hover {
     background: #9aa0ff;
     color: #000;
-    box-shadow: 0 0 20px rgba(154,160,255,0.6);
+    box-shadow: 0 0 20px rgba(154,160,255,0.7);
 }
 
 /* ===== INFO ===== */
@@ -80,15 +88,14 @@ body {
 .info {
     font-size: 12px;
     opacity: 0.6;
-    margin-top: 20px;
-    line-height: 1.6;
+    margin-top: 15px;
 }
 
-/* ===== CREDIT BOX ===== */
+/* ===== CREDIT ===== */
 
 .credit-box {
-    margin-top: 40px;
-    padding: 22px;
+    margin-top: 25px;
+    padding: 18px;
     background: rgba(0,0,0,0.55);
     border-radius: 14px;
     border: 1px solid rgba(255,255,255,0.08);
@@ -103,9 +110,9 @@ body {
 
 .copy-btn {
     position: absolute;
-    top: 15px;
-    right: 15px;
-    padding: 6px 12px;
+    top: 12px;
+    right: 12px;
+    padding: 5px 10px;
     font-size: 12px;
     border: none;
     border-radius: 6px;
@@ -120,10 +127,10 @@ body {
     box-shadow: 0 0 15px rgba(154,160,255,0.8);
 }
 
-.license-warning {
-    margin-top: 30px;
-    font-size: 12px;
-    opacity: 0.8;
+.footer {
+    margin-top: 20px;
+    font-size: 11px;
+    opacity: 0.5;
 }
 
 a {
@@ -133,12 +140,6 @@ a {
 
 a:hover {
     text-decoration: underline;
-}
-
-.footer {
-    margin-top: 40px;
-    font-size: 11px;
-    opacity: 0.5;
 }
 </style>
 </head>
@@ -173,11 +174,6 @@ WAV — high quality (large file)
 Artist Name: AUX<br>
 Track Name: This Valentine<br>
 Music provided by: https://www.youtube.com/@audio_exchange
-</div>
-
-<div class="license-warning">
-By downloading this track you agree to the 
-<a href="license.html">AUX License Terms</a>.
 </div>
 
 <div class="footer">
