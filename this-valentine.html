@@ -22,22 +22,22 @@ body {
 }
 
 .container {
-    max-width: 700px;
-    margin: 120px auto;
+    max-width: 720px;
+    margin: 100px auto;
     padding: 50px 40px;
     background: rgba(255,255,255,0.05);
-    backdrop-filter: blur(12px);
+    backdrop-filter: blur(14px);
     border: 1px solid rgba(255,255,255,0.08);
     border-radius: 20px;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+    box-shadow: 0 25px 70px rgba(0,0,0,0.6);
     text-align: center;
     animation: fadeUp 0.8s ease forwards;
 }
 
 h1 {
-    font-size: 34px;
-    letter-spacing: 3px;
-    margin-bottom: 10px;
+    font-size: 36px;
+    letter-spacing: 4px;
+    margin-bottom: 8px;
 }
 
 .track-name {
@@ -78,21 +78,38 @@ h1 {
 .info {
     font-size: 12px;
     opacity: 0.6;
-    margin-top: 25px;
+    margin-top: 20px;
     line-height: 1.6;
 }
 
-.license {
+.credit-box {
     margin-top: 40px;
+    padding: 20px;
+    background: rgba(0,0,0,0.4);
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.08);
     font-size: 13px;
+    text-align: left;
 }
 
-.license a {
+.credit-box strong {
+    display: block;
+    margin-bottom: 10px;
+    color: #9aa0ff;
+}
+
+.license-warning {
+    margin-top: 25px;
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+a {
     color: #9aa0ff;
     text-decoration: none;
 }
 
-.license a:hover {
+a:hover {
     text-decoration: underline;
 }
 
@@ -126,10 +143,22 @@ MP3 — recommended for YouTube<br>
 WAV — high quality (large file)
 </div>
 
-<div class="license">
+<div class="credit-box">
+<strong>Credit Format (Required):</strong>
+
+Artist Name: AUX<br>
+Track Name: This Valentine<br>
+Music provided by:
+https://www.youtube.com/@audio_exchange
+</div>
+
+<div class="license-warning">
 ✔ Free to use with credit<br>
-❌ No Content ID<br><br>
-<a href="license.html">View License</a>
+❌ No Content ID registration<br>
+❌ No reuploads<br><br>
+
+By downloading this track you agree to the 
+<a href="license.html">AUX License Terms</a>.
 </div>
 
 <div class="footer">
