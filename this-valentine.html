@@ -16,11 +16,6 @@ body {
     color: #f5f5f5;
 }
 
-@keyframes fadeUp {
-    from { opacity: 0; transform: translateY(30px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
 .container {
     max-width: 720px;
     margin: 100px auto;
@@ -31,7 +26,6 @@ body {
     border-radius: 20px;
     box-shadow: 0 25px 70px rgba(0,0,0,0.6);
     text-align: center;
-    animation: fadeUp 0.8s ease forwards;
 }
 
 h1 {
@@ -46,15 +40,12 @@ h1 {
     margin-bottom: 30px;
 }
 
-/* PLAYER */
-
 audio {
     width: 100%;
     margin-bottom: 30px;
-    filter: invert(1) hue-rotate(180deg);
 }
 
-/* BUTTONS */
+/* Buttons */
 
 .button {
     display: inline-block;
@@ -90,25 +81,9 @@ audio {
     text-align: left;
 }
 
-.credit-box strong {
-    display: block;
-    margin-bottom: 10px;
-    color: #9aa0ff;
-}
-
-.license-warning {
-    margin-top: 25px;
-    font-size: 12px;
-    opacity: 0.8;
-}
-
 a {
     color: #9aa0ff;
     text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
 }
 
 .footer {
@@ -126,9 +101,9 @@ a:hover {
 <h1>AUX</h1>
 <div class="track-name">This Valentine</div>
 
-<!-- PLAYER -->
+<!-- MP3 PLAYER -->
 <audio controls>
-  <source src="https://drive.google.com/uc?export=download&id=1Cu2lneTAHHSQVYtjS8ai_LoN4LO20hhk" type="audio/mpeg">
+  <source src="https://drive.google.com/uc?export=view&id=1Cu2lneTAHHSQVYtjS8ai_LoN4LO20hhk" type="audio/mpeg">
   Your browser does not support the audio element.
 </audio>
 
@@ -149,21 +124,11 @@ WAV — high quality (large file)
 </div>
 
 <div class="credit-box">
-<strong>Credit Format (Required):</strong>
-
+<strong>Credit Format (Required):</strong><br><br>
 Artist Name: AUX<br>
 Track Name: This Valentine<br>
 Music provided by:
 https://www.youtube.com/@audio_exchange
-</div>
-
-<div class="license-warning">
-✔ Free to use with credit<br>
-❌ No Content ID registration<br>
-❌ No reuploads<br><br>
-
-By downloading this track you agree to the 
-<a href="license.html">AUX License Terms</a>.
 </div>
 
 <div class="footer">
@@ -174,4 +139,3 @@ By downloading this track you agree to the
 
 </body>
 </html>
-
