@@ -2,139 +2,230 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>AUX — License</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AUX License</title>
 
 <style>
+* {
+    box-sizing: border-box;
+}
+
 body {
-  background:#0b0b0b;
-  color:#ffffff;
-  font-family:Arial, sans-serif;
-  max-width:800px;
-  margin:auto;
-  padding:60px 20px;
-  line-height:1.6;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: linear-gradient(135deg, #0f0f14, #1a1a2e, #12121a);
+    background-attachment: fixed;
+    color: #f5f5f5;
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+/* Smooth fade animation */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container {
+    max-width: 900px;
+    margin: 80px auto;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+    animation: fadeUp 0.8s ease-out forwards;
 }
 
 h1 {
-  text-align:center;
-  margin-bottom:40px;
+    font-size: 34px;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
 }
 
-h2 {
-  margin-top:40px;
-  font-size:18px;
+.subtitle {
+    color: #9aa0ff;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
 }
 
-p {
-  font-size:14px;
-  opacity:0.9;
+.section {
+    margin-bottom: 40px;
+    opacity: 0;
+    animation: fadeUp 0.8s ease-out forwards;
+}
+
+.section:nth-of-type(1) { animation-delay: 0.2s; }
+.section:nth-of-type(2) { animation-delay: 0.35s; }
+.section:nth-of-type(3) { animation-delay: 0.5s; }
+.section:nth-of-type(4) { animation-delay: 0.65s; }
+.section:nth-of-type(5) { animation-delay: 0.8s; }
+.section:nth-of-type(6) { animation-delay: 0.95s; }
+
+.section h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+    color: #ffffff;
 }
 
 ul {
-  list-style:none;
-  padding-left:0;
+    list-style: none;
+    padding: 0;
 }
 
-li {
-  margin:8px 0;
-  font-size:14px;
+ul li {
+    margin-bottom: 8px;
+    opacity: 0.9;
+    transition: transform 0.3s ease;
 }
 
-/* GREEN CHECKS */
-.allowed li::before {
-  content:"✔ ";
-  color:#2ecc71;
-  font-weight:bold;
+ul li:hover {
+    transform: translateX(6px);
 }
 
-/* RED CROSSES */
-.forbidden li::before {
-  content:"✖ ";
-  color:#e74c3c;
-  font-weight:bold;
+.permitted li::before {
+    content: "✔ ";
+    color: #00e676;
+}
+
+.prohibited li::before {
+    content: "✘ ";
+    color: #ff5252;
+}
+
+.credit-box {
+    padding: 20px;
+    background: rgba(0,0,0,0.4);
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.08);
+    margin-top: 15px;
+    font-size: 14px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.credit-box:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+}
+
+a {
+    color: #9aa0ff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 .footer {
-  margin-top:60px;
-  font-size:12px;
-  opacity:0.6;
-  text-align:center;
+    margin-top: 60px;
+    font-size: 12px;
+    color: #aaa;
+    text-align: center;
+    opacity: 0.6;
 }
 </style>
-
 </head>
+
 <body>
 
+<div class="container">
+
 <h1>AUX License</h1>
+<div class="subtitle">Official Usage Terms</div>
 
 <p>
 All music released on the AUX channel is provided under the terms of this license.
+Tracks may be created by AUX or by artists publishing under the AUX label.
 By downloading or using AUX music, you agree to the conditions below.
 </p>
 
-<h2>✔ Permitted Use</h2>
-<ul class="allowed">
-  <li>Use in YouTube videos and livestreams</li>
-  <li>Use in Shorts, Reels and TikTok</li>
-  <li>Commercial and non-commercial projects</li>
-  <li>Worldwide use with no time limitations</li>
+<div class="section">
+<h2>Permitted Use</h2>
+<ul class="permitted">
+<li>YouTube videos and livestreams</li>
+<li>Shorts, Reels and TikTok content</li>
+<li>Commercial and non-commercial projects</li>
+<li>Client work and monetized content</li>
+<li>Worldwide use with no time limitations</li>
 </ul>
+</div>
 
-<h2>✔ Attribution Required</h2>
+<div class="section">
+<h2>Attribution Required</h2>
 <p>You must include the following credit:</p>
 
-<p>
+<div class="credit-box">
+<strong>Artist Name:</strong><br>
 <strong>Track Name:</strong><br>
-Music provided by: 
+Music provided by:
 <a href="https://www.youtube.com/@audio_exchange" target="_blank">
 https://www.youtube.com/@audio_exchange
 </a>
-</p>
+</div>
+</div>
 
-
-<h2>✔ Content ID Policy</h2>
-<ul class="allowed">
-  <li>No Content ID registration</li>
-  <li>No copyright claims when used correctly</li>
+<div class="section">
+<h2>Content ID Policy</h2>
+<ul class="permitted">
+<li>No Content ID registration</li>
+<li>No copyright claims when used correctly</li>
 </ul>
+</div>
 
-<h2>❌ Prohibited Use</h2>
-<ul class="forbidden">
-  <li>Reuploading or redistributing the tracks</li>
-  <li>Selling or sublicensing the music</li>
-  <li>Uploading tracks to Spotify, Apple Music or similar platforms</li>
-  <li>Claiming the music as your own</li>
-  <li>Registering the tracks in Content ID systems</li>
+<div class="section">
+<h2>Allowed Modifications</h2>
+<ul class="permitted">
+<li>Cutting, trimming or looping the track</li>
+<li>Using the track as background music</li>
+<li>Synchronizing with visual content</li>
 </ul>
+</div>
 
-<h2>✔ Allowed Modifications</h2>
-<ul class="allowed">
-  <li>Cutting or looping the track</li>
-  <li>Using the track as background music</li>
+<div class="section">
+<h2>Prohibited Use</h2>
+<ul class="prohibited">
+<li>Reuploading or redistributing the track as standalone content</li>
+<li>Selling or sublicensing the music</li>
+<li>Uploading to Spotify, Apple Music or streaming platforms</li>
+<li>Claiming ownership or authorship</li>
+<li>Registering in Content ID systems</li>
+<li>Releasing remixes as standalone music files</li>
 </ul>
+</div>
 
-<h2>❌ Not Allowed</h2>
-<ul class="forbidden">
-  <li>Releasing remixes as standalone tracks</li>
-  <li>Redistributing modified versions as music-only files</li>
-</ul>
-
+<div class="section">
 <h2>Ownership</h2>
 <p>
-All rights remain with the original artist and AUX.
-This license grants usage rights only and does not transfer ownership.
+All rights remain with the original artist and/or AUX.
+This license grants usage rights only and does not transfer ownership or copyright.
 </p>
+</div>
 
+<div class="section">
 <h2>Acceptance</h2>
 <p>
-By downloading or using AUX music,
-you confirm that you have read, understood and agreed to this license.
+By downloading or using AUX music, you confirm that you have read,
+understood and agreed to this license.
 </p>
+</div>
 
 <div class="footer">
-© AUX — Minimal Copyright-Free Music for Creators
+© AUX — Copyright-Free Music Label
+</div>
+
 </div>
 
 </body>
 </html>
-
