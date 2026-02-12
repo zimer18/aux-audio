@@ -43,8 +43,18 @@ h1 {
 .track-name {
     font-size: 16px;
     color: #9aa0ff;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
+
+/* PLAYER */
+
+audio {
+    width: 100%;
+    margin-bottom: 30px;
+    filter: invert(1) hue-rotate(180deg);
+}
+
+/* BUTTONS */
 
 .button {
     display: inline-block;
@@ -53,24 +63,12 @@ h1 {
     font-size: 14px;
     text-decoration: none;
     margin: 10px;
+    border: 1px solid #9aa0ff;
+    color: #9aa0ff;
     transition: all 0.3s ease;
 }
 
-.mp3 {
-    background: #9aa0ff;
-    color: #000;
-}
-
-.mp3:hover {
-    background: #b6bbff;
-}
-
-.wav {
-    border: 1px solid #9aa0ff;
-    color: #9aa0ff;
-}
-
-.wav:hover {
+.button:hover {
     background: #9aa0ff;
     color: #000;
 }
@@ -128,12 +126,19 @@ a:hover {
 <h1>AUX</h1>
 <div class="track-name">This Valentine</div>
 
-<a class="button mp3"
+<!-- PLAYER -->
+<audio controls>
+  <source src="https://drive.google.com/uc?export=download&id=1Cu2lneTAHHSQVYtjS8ai_LoN4LO20hhk" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<!-- DOWNLOAD BUTTONS -->
+<a class="button"
 href="https://drive.google.com/uc?export=download&id=1Cu2lneTAHHSQVYtjS8ai_LoN4LO20hhk">
 Download MP3
 </a>
 
-<a class="button wav"
+<a class="button"
 href="https://drive.google.com/uc?export=download&id=11xPIN_kTPC5SwVSYM_YzTCr0vodWW1jP">
 Download WAV
 </a>
@@ -169,3 +174,4 @@ By downloading this track you agree to the
 
 </body>
 </html>
+
