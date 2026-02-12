@@ -35,29 +35,18 @@ body {
     text-align: center;
 }
 
-/* BRAND */
+/* LOGO */
 
-.brand-block {
-    margin-bottom: 40px;
+.logo {
+    width: 180px;
+    margin-bottom: 30px;
+    filter: drop-shadow(0 0 25px rgba(255,255,255,0.2));
+    transition: 0.4s;
 }
 
-.brand {
-    font-size: 36px;
-    font-weight: 800;
-    letter-spacing: 8px;
-    background: linear-gradient(90deg,#9aa0ff,#ffffff,#9aa0ff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: 0 0 30px rgba(154,160,255,0.35);
-    margin-bottom: 15px;
-}
-
-.brand-line {
-    width: 70px;
-    height: 2px;
-    margin: 0 auto;
-    background: linear-gradient(90deg, transparent, #9aa0ff, transparent);
-    opacity: 0.6;
+.logo:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 35px rgba(154,160,255,0.6));
 }
 
 /* TRACK TITLE */
@@ -66,7 +55,7 @@ body {
     font-size: 46px;
     font-weight: 700;
     letter-spacing: 2px;
-    margin: 50px 0 50px 0;
+    margin: 40px 0 50px 0;
     background: linear-gradient(90deg,#ffffff,#9aa0ff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -166,13 +155,8 @@ a:hover {
 
 <div class="container">
 
-<!-- BRAND -->
-<div class="brand-block">
-    <div class="brand">AUX</div>
-    <div class="brand-line"></div>
-</div>
+<img src="aux-logo.png" class="logo" alt="AUX Logo">
 
-<!-- TRACK -->
 <div class="track-title">This Valentine</div>
 
 <a class="button"
@@ -232,6 +216,3 @@ https://www.youtube.com/@audio_exchange`;
 
 </body>
 </html>
-
-
-
