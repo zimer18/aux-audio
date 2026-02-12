@@ -19,7 +19,7 @@ body {
 .container {
     max-width: 720px;
     margin: 100px auto;
-    padding: 50px 40px;
+    padding: 60px 40px;
     background: rgba(255,255,255,0.05);
     backdrop-filter: blur(14px);
     border: 1px solid rgba(255,255,255,0.08);
@@ -29,7 +29,7 @@ body {
 }
 
 h1 {
-    font-size: 36px;
+    font-size: 38px;
     letter-spacing: 4px;
     margin-bottom: 8px;
 }
@@ -37,32 +37,45 @@ h1 {
 .track-name {
     font-size: 16px;
     color: #9aa0ff;
-    margin-bottom: 30px;
-}
-
-audio {
-    width: 100%;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 }
 
 /* Buttons */
 
 .button {
     display: inline-block;
-    padding: 14px 32px;
-    border-radius: 8px;
+    padding: 15px 36px;
+    border-radius: 10px;
     font-size: 14px;
     text-decoration: none;
-    margin: 10px;
+    margin: 12px;
     border: 1px solid #9aa0ff;
-    color: #9aa0ff;
     transition: all 0.3s ease;
 }
 
-.button:hover {
+/* MP3 primary */
+.button.mp3 {
     background: #9aa0ff;
     color: #000;
 }
+
+.button.mp3:hover {
+    background: #b6bbff;
+    box-shadow: 0 0 25px rgba(154,160,255,0.6);
+}
+
+/* WAV secondary */
+.button.wav {
+    color: #9aa0ff;
+    background: transparent;
+}
+
+.button.wav:hover {
+    background: #9aa0ff;
+    color: #000;
+}
+
+/* Info */
 
 .info {
     font-size: 12px;
@@ -72,18 +85,34 @@ audio {
 }
 
 .credit-box {
-    margin-top: 40px;
-    padding: 20px;
+    margin-top: 50px;
+    padding: 25px;
     background: rgba(0,0,0,0.4);
-    border-radius: 12px;
+    border-radius: 14px;
     border: 1px solid rgba(255,255,255,0.08);
     font-size: 13px;
     text-align: left;
 }
 
+.credit-box strong {
+    display: block;
+    margin-bottom: 12px;
+    color: #9aa0ff;
+}
+
+.license-note {
+    margin-top: 25px;
+    font-size: 12px;
+    opacity: 0.8;
+}
+
 a {
     color: #9aa0ff;
     text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 .footer {
@@ -101,19 +130,12 @@ a {
 <h1>AUX</h1>
 <div class="track-name">This Valentine</div>
 
-<!-- MP3 PLAYER -->
-<audio controls>
-  <source src="https://drive.google.com/uc?export=view&id=1Cu2lneTAHHSQVYtjS8ai_LoN4LO20hhk" type="audio/mpeg">
-  Your browser does not support the audio element.
-</audio>
-
-<!-- DOWNLOAD BUTTONS -->
-<a class="button"
+<a class="button mp3"
 href="https://drive.google.com/uc?export=download&id=1Cu2lneTAHHSQVYtjS8ai_LoN4LO20hhk">
 Download MP3
 </a>
 
-<a class="button"
+<a class="button wav"
 href="https://drive.google.com/uc?export=download&id=11xPIN_kTPC5SwVSYM_YzTCr0vodWW1jP">
 Download WAV
 </a>
@@ -124,11 +146,17 @@ WAV — high quality (large file)
 </div>
 
 <div class="credit-box">
-<strong>Credit Format (Required):</strong><br><br>
+<strong>Credit Format (Required):</strong>
+
 Artist Name: AUX<br>
 Track Name: This Valentine<br>
 Music provided by:
 https://www.youtube.com/@audio_exchange
+</div>
+
+<div class="license-note">
+By downloading this track you agree to the
+<a href="license.html">AUX License Terms</a>.
 </div>
 
 <div class="footer">
@@ -139,3 +167,4 @@ https://www.youtube.com/@audio_exchange
 
 </body>
 </html>
+
