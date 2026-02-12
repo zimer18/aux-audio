@@ -16,104 +16,125 @@ body {
     color: #f5f5f5;
 }
 
+/* Fade animation */
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(25px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
 .container {
     max-width: 900px;
     margin: 80px auto;
-    padding: 50px 40px;
+    padding: 60px;
     background: rgba(255,255,255,0.05);
     backdrop-filter: blur(14px);
-    border: 1px solid rgba(255,255,255,0.08);
     border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.08);
     box-shadow: 0 25px 70px rgba(0,0,0,0.6);
+    animation: fadeUp 0.8s ease forwards;
 }
 
+/* Header */
 h1 {
+    text-align: center;
     font-size: 34px;
     letter-spacing: 3px;
     margin-bottom: 10px;
 }
 
 .subtitle {
-    color: #9aa0ff;
-    font-size: 13px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 30px;
+    text-align: center;
+    font-size: 14px;
+    opacity: 0.6;
+    margin-bottom: 40px;
 }
 
+/* Language Switch */
 .lang-switch {
+    text-align: center;
     margin-bottom: 40px;
-    text-align: right;
 }
 
 .lang-switch a {
-    margin-left: 10px;
-    font-size: 13px;
-    color: #9aa0ff;
-    text-decoration: none;
-    border: 1px solid #9aa0ff;
+    display: inline-block;
+    margin: 0 8px;
     padding: 6px 12px;
     border-radius: 6px;
+    font-size: 13px;
+    text-decoration: none;
+    border: 1px solid rgba(255,255,255,0.2);
+    color: #ccc;
     transition: 0.3s;
 }
 
-.lang-switch a:hover {
+.lang-switch a.active {
     background: #9aa0ff;
     color: #000;
+    border-color: #9aa0ff;
 }
 
+.lang-switch a:hover {
+    background: rgba(255,255,255,0.1);
+}
+
+/* Sections */
 .section {
-    margin-bottom: 35px;
+    margin-bottom: 40px;
 }
 
 .section h2 {
     font-size: 18px;
-    margin-bottom: 12px;
-    color: #ffffff;
+    margin-bottom: 15px;
+    color: #9aa0ff;
 }
 
 ul {
     list-style: none;
     padding: 0;
+    line-height: 1.8;
 }
 
 ul li {
-    margin-bottom: 8px;
+    margin-bottom: 6px;
 }
 
-.permitted li::before {
-    content: "✔ ";
-    color: #00e676;
-}
+.allowed { color: #6CFF8F; }
+.denied { color: #FF6B6B; }
 
-.prohibited li::before {
-    content: "✘ ";
-    color: #ff5252;
-}
-
+/* Credit Box */
 .credit-box {
+    margin-top: 20px;
     padding: 20px;
     background: rgba(0,0,0,0.4);
     border-radius: 12px;
     border: 1px solid rgba(255,255,255,0.08);
+    position: relative;
     font-size: 14px;
 }
 
-a {
-    color: #9aa0ff;
-    text-decoration: none;
+.copy-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    font-size: 12px;
+    padding: 6px 10px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    background: #9aa0ff;
+    color: #000;
+    transition: 0.3s;
 }
 
-a:hover {
-    text-decoration: underline;
+.copy-btn:hover {
+    background: #b6bbff;
 }
 
 .footer {
+    text-align: center;
     margin-top: 60px;
     font-size: 12px;
-    color: #aaa;
-    opacity: 0.6;
-    text-align: center;
+    opacity: 0.5;
 }
 </style>
 </head>
@@ -123,95 +144,98 @@ a:hover {
 <div class="container">
 
 <h1>AUX License</h1>
-<div class="subtitle">Official Usage Terms</div>
+<div class="subtitle">
+Official usage license for AUX Digital Music Label releases.
+</div>
 
 <div class="lang-switch">
-    <a href="license.html">EN</a>
-    <a href="license-ru.html">RU</a>
-    <a href="license-es.html">ES</a>
+<a href="license.html" class="active">🇺🇸 English</a>
+<a href="license-es.html">🇪🇸 Español</a>
+<a href="license-ru.html">🇷🇺 Русский</a>
 </div>
 
 <div class="section">
-<p>
-All music released on the AUX channel is protected by copyright and provided under the terms of this license.
-Tracks may be created by AUX or by individual artists publishing under the AUX label.
-By downloading, accessing or using any AUX music, you agree to the conditions below.
-</p>
-</div>
-
-<div class="section">
-<h2>Permitted Use</h2>
-<ul class="permitted">
-<li>YouTube videos and livestreams</li>
-<li>Shorts, Reels and TikTok content</li>
-<li>Commercial and non-commercial projects</li>
-<li>Client work and monetized content</li>
-<li>Worldwide use with no time limitations</li>
+<h2>✔ Permitted Use</h2>
+<ul>
+<li class="allowed">✔ Use in YouTube videos & livestreams</li>
+<li class="allowed">✔ Use in Shorts, Reels & TikTok</li>
+<li class="allowed">✔ Commercial & non-commercial projects</li>
+<li class="allowed">✔ Worldwide use with no time limitations</li>
 </ul>
 </div>
 
 <div class="section">
-<h2>Attribution Required</h2>
-<p>You must include the following credit in your video description or project credits:</p>
+<h2>✔ Attribution Required</h2>
+<p>You must include the following credit:</p>
 
-<div class="credit-box">
-Artist Name:<br>
-Track Name:<br>
-Music provided by: https://www.youtube.com/@audio_exchange
+<div class="credit-box" id="creditText">
+<button class="copy-btn" onclick="copyCredit()">Copy</button>
+
+Artist Name: <br>
+Track Name: <br>
+Music provided by:
+https://www.youtube.com/@audio_exchange
+
 </div>
 </div>
 
 <div class="section">
-<h2>Content ID Policy</h2>
-<ul class="permitted">
-<li>No Content ID registration</li>
-<li>No copyright claims when used correctly</li>
+<h2>✔ Content ID Policy</h2>
+<ul>
+<li class="allowed">✔ No Content ID registration</li>
+<li class="allowed">✔ No copyright claims when used correctly</li>
 </ul>
 </div>
 
 <div class="section">
-<h2>Allowed Modifications</h2>
-<ul class="permitted">
-<li>Cutting, trimming or looping the track</li>
-<li>Using the track as background music</li>
-<li>Synchronizing the track with visual content</li>
-</ul>
-</div>
-
-<div class="section">
-<h2>Prohibited Use</h2>
-<ul class="prohibited">
-<li>Reuploading or redistributing the track as standalone content</li>
-<li>Selling or sublicensing the music</li>
-<li>Uploading the track to Spotify, Apple Music or other streaming platforms</li>
-<li>Claiming ownership or authorship</li>
-<li>Registering the track in Content ID systems</li>
-<li>Releasing remixes as standalone music files</li>
+<h2>❌ Prohibited Use</h2>
+<ul>
+<li class="denied">✖ Reuploading or redistributing tracks</li>
+<li class="denied">✖ Selling or sublicensing the music</li>
+<li class="denied">✖ Uploading to Spotify, Apple Music or similar platforms</li>
+<li class="denied">✖ Registering in Content ID systems</li>
+<li class="denied">✖ Claiming ownership</li>
 </ul>
 </div>
 
 <div class="section">
 <h2>Ownership</h2>
 <p>
-All rights, title and interest in the music remain with the original artist and/or AUX.
-This license grants usage rights only and does not transfer ownership or copyright.
+All rights remain with the original artist and AUX Digital Music Label.
+This license grants usage rights only and does not transfer ownership.
 </p>
 </div>
 
 <div class="section">
-<h2>Legal Notice</h2>
+<h2>Acceptance</h2>
 <p>
-The English version of this license is the official version.
-Translations are provided for convenience only.
+By downloading or using AUX music, you confirm that you have read,
+understood and agreed to these license terms.
 </p>
 </div>
 
 <div class="footer">
-© AUX — Copyright-Free Music Label
+© AUX — Digital Music Label
 </div>
 
 </div>
+
+<script>
+function copyCredit() {
+    const text = `Artist Name:
+Track Name:
+Music provided by:
+https://www.youtube.com/@audio_exchange`;
+
+    navigator.clipboard.writeText(text).then(() => {
+        const btn = document.querySelector('.copy-btn');
+        btn.innerText = "Copied ✓";
+        setTimeout(() => {
+            btn.innerText = "Copy";
+        }, 2000);
+    });
+}
+</script>
 
 </body>
 </html>
-
