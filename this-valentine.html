@@ -10,19 +10,20 @@
 
 body {
     margin: 0;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     background: linear-gradient(135deg, #0f0f14, #1a1a2e, #12121a);
+    background-attachment: fixed;
     color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
 .container {
     width: 100%;
     max-width: 720px;
-    padding: 60px 40px;
+    padding: 50px 40px;
     background: rgba(255,255,255,0.05);
     backdrop-filter: blur(14px);
     border: 1px solid rgba(255,255,255,0.08);
@@ -33,18 +34,16 @@ body {
 
 .logo {
     width: 320px;
+    max-width: 90%;
     margin-bottom: 20px;
-    filter: drop-shadow(0 0 25px rgba(255,255,255,0.2));
 }
 
-.track-title {
-    font-size: 36px;
+.track-name {
+    font-size: 32px;
     font-weight: 600;
-    letter-spacing: 1px;
     margin-bottom: 40px;
-    background: linear-gradient(90deg,#ffffff,#9aa0ff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #cfd3ff;
+    letter-spacing: 1px;
 }
 
 .button {
@@ -56,7 +55,7 @@ body {
     margin: 10px;
     border: 1px solid #9aa0ff;
     color: #9aa0ff;
-    transition: 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .button:hover {
@@ -74,7 +73,7 @@ body {
 .credit-box {
     margin-top: 40px;
     padding: 20px;
-    background: rgba(0,0,0,0.4);
+    background: rgba(0,0,0,0.5);
     border-radius: 12px;
     border: 1px solid rgba(255,255,255,0.08);
     font-size: 13px;
@@ -86,17 +85,23 @@ body {
     position: absolute;
     top: 15px;
     right: 15px;
-    padding: 6px 14px;
+    padding: 6px 12px;
     font-size: 12px;
-    border-radius: 6px;
     border: none;
-    cursor: pointer;
+    border-radius: 6px;
     background: #9aa0ff;
     color: #000;
+    cursor: pointer;
 }
 
 .copy-btn:hover {
     background: #b6bbff;
+}
+
+.license-warning {
+    margin-top: 30px;
+    font-size: 12px;
+    opacity: 0.8;
 }
 
 a {
@@ -120,9 +125,9 @@ a:hover {
 
 <div class="container">
 
-<img src="aux-logo.png.png" class="logo">
+<img src="aux-logo.png" alt="AUX Logo" class="logo">
 
-<div class="track-title">This Valentine</div>
+<div class="track-name">This Valentine</div>
 
 <a class="button"
 href="https://drive.google.com/uc?export=download&id=1Cu2lneTAHHSQVYtjS8ai_LoN4LO20hhk">
@@ -143,16 +148,15 @@ WAV — high quality (large file)
 <button class="copy-btn" onclick="copyText()">Copy</button>
 
 <strong>Required Credit:</strong><br><br>
-
 Artist Name: AUX<br>
 Track Name: This Valentine<br>
 Music provided by: https://www.youtube.com/@audio_exchange
 </div>
 
-<p style="margin-top:25px;font-size:12px;opacity:0.8;">
+<div class="license-warning">
 By downloading this track you agree to the 
 <a href="license.html">AUX License Terms</a>.
-</p>
+</div>
 
 <div class="footer">
 © AUX — Digital Music Label
@@ -162,11 +166,11 @@ By downloading this track you agree to the
 
 <script>
 function copyText() {
-    const text = `Artist Name: AUX
+  const text = `Artist Name: AUX
 Track Name: This Valentine
 Music provided by: https://www.youtube.com/@audio_exchange`;
-    navigator.clipboard.writeText(text);
-    alert("Credit copied!");
+  navigator.clipboard.writeText(text);
+  alert("Credit copied!");
 }
 </script>
 
