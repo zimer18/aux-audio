@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AUX Лицензия</title>
+<title>Лицензия AUX</title>
 
 <style>
 * { box-sizing: border-box; }
@@ -16,104 +16,120 @@ body {
     color: #f5f5f5;
 }
 
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(25px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
 .container {
     max-width: 900px;
     margin: 80px auto;
-    padding: 50px 40px;
+    padding: 60px;
     background: rgba(255,255,255,0.05);
     backdrop-filter: blur(14px);
-    border: 1px solid rgba(255,255,255,0.08);
     border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.08);
     box-shadow: 0 25px 70px rgba(0,0,0,0.6);
+    animation: fadeUp 0.8s ease forwards;
 }
 
 h1 {
+    text-align: center;
     font-size: 34px;
     letter-spacing: 3px;
     margin-bottom: 10px;
 }
 
 .subtitle {
-    color: #9aa0ff;
-    font-size: 13px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 30px;
+    text-align: center;
+    font-size: 14px;
+    opacity: 0.6;
+    margin-bottom: 40px;
 }
 
 .lang-switch {
+    text-align: center;
     margin-bottom: 40px;
-    text-align: right;
 }
 
 .lang-switch a {
-    margin-left: 10px;
-    font-size: 13px;
-    color: #9aa0ff;
-    text-decoration: none;
-    border: 1px solid #9aa0ff;
+    display: inline-block;
+    margin: 0 8px;
     padding: 6px 12px;
     border-radius: 6px;
+    font-size: 13px;
+    text-decoration: none;
+    border: 1px solid rgba(255,255,255,0.2);
+    color: #ccc;
     transition: 0.3s;
 }
 
-.lang-switch a:hover {
+.lang-switch a.active {
     background: #9aa0ff;
     color: #000;
+    border-color: #9aa0ff;
+}
+
+.lang-switch a:hover {
+    background: rgba(255,255,255,0.1);
 }
 
 .section {
-    margin-bottom: 35px;
+    margin-bottom: 40px;
 }
 
 .section h2 {
     font-size: 18px;
-    margin-bottom: 12px;
-    color: #ffffff;
+    margin-bottom: 15px;
+    color: #9aa0ff;
 }
 
 ul {
     list-style: none;
     padding: 0;
+    line-height: 1.8;
 }
 
 ul li {
-    margin-bottom: 8px;
+    margin-bottom: 6px;
 }
 
-.permitted li::before {
-    content: "✔ ";
-    color: #00e676;
-}
-
-.prohibited li::before {
-    content: "✘ ";
-    color: #ff5252;
-}
+.allowed { color: #6CFF8F; }
+.denied { color: #FF6B6B; }
 
 .credit-box {
+    margin-top: 20px;
     padding: 20px;
     background: rgba(0,0,0,0.4);
     border-radius: 12px;
     border: 1px solid rgba(255,255,255,0.08);
+    position: relative;
     font-size: 14px;
 }
 
-a {
-    color: #9aa0ff;
-    text-decoration: none;
+.copy-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    font-size: 12px;
+    padding: 6px 10px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    background: #9aa0ff;
+    color: #000;
+    transition: 0.3s;
 }
 
-a:hover {
-    text-decoration: underline;
+.copy-btn:hover {
+    background: #b6bbff;
 }
 
 .footer {
+    text-align: center;
     margin-top: 60px;
     font-size: 12px;
-    color: #aaa;
-    opacity: 0.6;
-    text-align: center;
+    opacity: 0.5;
 }
 </style>
 </head>
@@ -122,95 +138,101 @@ a:hover {
 
 <div class="container">
 
-<h1>AUX Лицензия</h1>
-<div class="subtitle">Официальные условия использования</div>
+<h1>Лицензия AUX</h1>
+<div class="subtitle">
+Официальная лицензия цифрового музыкального лейбла AUX.
+</div>
 
 <div class="lang-switch">
-    <a href="license.html">EN</a>
-    <a href="license-ru.html">RU</a>
-    <a href="license-es.html">ES</a>
+<a href="license.html">🇺🇸 English</a>
+<a href="license-es.html">🇪🇸 Español</a>
+<a href="license-ru.html" class="active">🇷🇺 Русский</a>
 </div>
 
 <div class="section">
-<p>
-Вся музыка, опубликованная на канале AUX, защищена авторским правом и предоставляется на условиях данной лицензии.
-Треки могут быть созданы AUX или отдельными артистами, публикующимися под лейблом AUX.
-Скачивая, получая доступ или используя любую музыку AUX, вы соглашаетесь с условиями, изложенными ниже.
-</p>
-</div>
-
-<div class="section">
-<h2>Разрешённое использование</h2>
-<ul class="permitted">
-<li>Видео и прямые трансляции на YouTube</li>
-<li>Shorts, Reels и контент для TikTok</li>
-<li>Коммерческие и некоммерческие проекты</li>
-<li>Работа для клиентов и монетизируемый контент</li>
-<li>Использование по всему миру без ограничения по времени</li>
+<h2>✔ Разрешено</h2>
+<ul>
+<li class="allowed">✔ Использование в видео и стримах на YouTube</li>
+<li class="allowed">✔ Использование в Shorts, Reels и TikTok</li>
+<li class="allowed">✔ Коммерческие и некоммерческие проекты</li>
+<li class="allowed">✔ Использование по всему миру без ограничений по времени</li>
 </ul>
 </div>
 
 <div class="section">
-<h2>Обязательное указание авторства</h2>
-<p>Вы должны указать следующий кредит в описании видео или в титрах проекта:</p>
+<h2>✔ Обязательное указание авторства</h2>
+<p>Вы должны добавить следующий кредит в описание видео или проекта:</p>
 
 <div class="credit-box">
-Artist Name:<br>
-Track Name:<br>
-Music provided by: https://www.youtube.com/@audio_exchange
+<button class="copy-btn" onclick="copyCredit()">Копировать</button>
+
+Имя артиста:<br>
+Название трека:<br>
+Музыка предоставлена:
+https://www.youtube.com/@audio_exchange
+
 </div>
 </div>
 
 <div class="section">
-<h2>Политика Content ID</h2>
-<ul class="permitted">
-<li>Запрещена регистрация музыки в системах Content ID</li>
-<li>При корректном использовании претензии по авторским правам не предъявляются</li>
+<h2>✔ Политика Content ID</h2>
+<ul>
+<li class="allowed">✔ Запрещено регистрировать треки в системах Content ID</li>
+<li class="allowed">✔ При правильном использовании претензии не подаются</li>
 </ul>
 </div>
 
 <div class="section">
-<h2>Разрешённые изменения</h2>
-<ul class="permitted">
-<li>Обрезка, монтаж или зацикливание трека</li>
-<li>Использование трека в качестве фоновой музыки</li>
-<li>Синхронизация трека с визуальным контентом</li>
-</ul>
-</div>
-
-<div class="section">
-<h2>Запрещённое использование</h2>
-<ul class="prohibited">
-<li>Перезалив или распространение трека как самостоятельного музыкального файла</li>
-<li>Продажа или передача лицензии третьим лицам</li>
-<li>Загрузка трека на Spotify, Apple Music или другие стриминговые платформы</li>
-<li>Заявление авторства или владения музыкой</li>
-<li>Регистрация трека в системах Content ID</li>
-<li>Выпуск ремиксов как самостоятельных музыкальных релизов</li>
+<h2>❌ Запрещено</h2>
+<ul>
+<li class="denied">✖ Перезалив или повторное распространение треков</li>
+<li class="denied">✖ Продажа или передача лицензии третьим лицам</li>
+<li class="denied">✖ Загрузка на Spotify, Apple Music и другие стриминговые платформы</li>
+<li class="denied">✖ Регистрация в системах Content ID</li>
+<li class="denied">✖ Присвоение авторства или прав на музыку</li>
 </ul>
 </div>
 
 <div class="section">
 <h2>Право собственности</h2>
 <p>
-Все права, титулы и интерес к музыке принадлежат оригинальному артисту и/или AUX.
-Данная лицензия предоставляет только право использования и не передаёт право собственности или авторские права.
+Все права принадлежат оригинальному артисту и лейблу AUX.
+Данная лицензия предоставляет только право использования
+и не передает право собственности.
 </p>
 </div>
 
 <div class="section">
-<h2>Юридическое уведомление</h2>
+<h2>Принятие условий</h2>
 <p>
-Английская версия данной лицензии является официальной.
-Переводы предоставляются исключительно для удобства.
+Скачивая или используя музыку AUX,
+вы подтверждаете, что прочитали,
+поняли и согласились с условиями лицензии.
 </p>
 </div>
 
 <div class="footer">
-© AUX — Copyright-Free Music Label
+© AUX — Digital Music Label
 </div>
 
 </div>
+
+<script>
+function copyCredit() {
+    const text = `Имя артиста:
+Название трека:
+Музыка предоставлена:
+https://www.youtube.com/@audio_exchange`;
+
+    navigator.clipboard.writeText(text).then(() => {
+        const btn = document.querySelector('.copy-btn');
+        btn.innerText = "Скопировано ✓";
+        setTimeout(() => {
+            btn.innerText = "Копировать";
+        }, 2000);
+    });
+}
+</script>
 
 </body>
 </html>
